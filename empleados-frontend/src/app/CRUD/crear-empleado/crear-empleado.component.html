@@ -1,31 +1,41 @@
-<h2>CREAR EMPLEADO</h2>
+<h2 class="text-center text-decoration-underline">CREAR EMPLEADO</h2>
+<div class="container-sm col-md-4 text-center border p-3 border-black rounded" >
+    <form [formGroup]="empleadoForm" (ngSubmit)="guardar()">
 
-<form [formGroup]="empleadoForm" (ngSubmit)="guardar()">
-    <label>Nombre</label>
-    <br>
-    <input type="text" formControlName="nombreEmpleado">
-    <br>
+            <div class="m-1">
+                <label class="col-4 fs-4 ">Nombre: </label>
+                <input type="text" formControlName="nombreEmpleado">
+                <br>
+            </div>
 
-    <label>Apellido</label>
-    <br>
-    <input type="text" formControlName="apellidoEmpleado">
-    <br>
+            <div class="m-1">
+                <label class="col-4 fs-4">Apellido: </label>
+                <input type="text" formControlName="apellidoEmpleado">
+                <br>
+            </div>
 
-    <label>Direccion</label>
-    <br>
-    <input type="text" formControlName="direccionEmpleado">
-    <br>
+            <div class="m-1">
+                <label class="col-4 fs-4">Direccion: </label>
+                <input type="text" formControlName="direccionEmpleado">
+                <br>
+            </div>
 
-    <label>Cargo</label>
-    <br>
-    <input type="text" formControlName="cargoEmpleado">
-    <br>
+            <div class="m-1">
+                <label class="col-4 fs-4">Cargo: </label>
+                <input type="text" formControlName="cargoEmpleado">
+                <br>
+            </div>
 
-    <label>DNI</label>
-    <br>
-    <input type="number" formControlName="dniEmpleado">
-    <br>
+            <div class="m-1">
+                <label class="col-4 fs-4">DNI:</label>
+                <input type="number" formControlName="dniEmpleado">
+                <br>
+            </div>
 
-    <button type="button" (click)="guardar()">Guardar</button>
-    <button type="button" (click)="limpiar()">Limpiar</button>
-</form>
+
+        <div class="">
+            <button type="submit" class="col-3 m-1" >Guardar</button>
+            <button type="button" class="col-3 m-1" (click)="limpiar()">Limpiar</button>
+        </div>
+    </form>
+</div>

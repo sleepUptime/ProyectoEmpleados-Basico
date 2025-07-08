@@ -1,2 +1,24 @@
-<p>actualizar-empleado works!</p>
-<h1>HOLA</h1>
+<h1>ACTUALIZAR EMPLEADO</h1>
+
+<form (ngSubmit)="actualizarEmpleado()">
+    <label for="">Nombre:</label>
+    <input [(ngModel)]="empleado.nombreEmpleado" name="nombreEmpleado">
+    <br>
+    <label for="">Apellido</label>
+    <input [(ngModel)]="empleado.apellidoEmpleado" name="apellidoEmpleado">
+    <br>
+    <br>
+    <label for="">Direccion:</label>
+    <input [(ngModel)]="empleado.direccionEmpleado" name="direccionEmpleado">
+    <br>
+    <br>
+    <label for="">Cargo:</label>
+    <input [(ngModel)]="empleado.cargoEmpleado" name="cargoEmpleado">
+    <br>
+        <br>
+    <label for="">DNI:</label>
+    <input [(ngModel)]="empleado.dniEmpleado" name="dniEmpleado">
+    <br>
+
+    <button type="submit">Actualizar</button>
+</form>

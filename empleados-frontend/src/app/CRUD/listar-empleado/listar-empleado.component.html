@@ -1,20 +1,40 @@
-<p>listar-empleado works!</p>
+<div class="container-sm">
+    <h1 class="">Empleados:</h1>
+    <table class="table table-hover table-bordered text-center align-middle ">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Cargo</th>
+                <th>Dni</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+    
 
-<h1>Empleados:</h1>
+        <tbody>
+            @for (empleado of empleados; track $index) {
+                <tr>
+                    <td>{{empleado.idEmpleado}}</td>
+                    <td>{{empleado.nombreEmpleado}}</td>
+                    <td>{{empleado.apellidoEmpleado}}</td>
+                    <td>{{empleado.direccionEmpleado}}</td>
+                    <td>{{empleado.cargoEmpleado}}</td>
+                    <td>{{empleado.dniEmpleado}}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm m-1" (click)="deleteEmpleado(empleado.idEmpleado)"> 
+                            ELIMINAR
+                        </button>
 
-<ul class="empleado-list container text-center  fs-5 p-0">
-    @for (empleado of empleados; track $index) {
-                    <div class="empleado-container row ">
-                        
-                        <p class="col border border-black m-0 ">{{empleado.idEmpleado}}</p>
-                        <p class="col border border-black m-0 ">{{empleado.nombreEmpleado}}</p>
-                        <p class="col border border-black m-0">{{empleado.apellidoEmpleado}}</p>
-                        <p class="col-4 border border-black m-0">{{empleado.direccionEmpleado}}</p>
-                        <p class="col border border-black m-0">{{empleado.cargoEmpleado}}</p>
-                        <p class="col border border-black m-0">{{empleado.dniEmpleado}}</p>
-                        <button class="col m-0" (click)="deleteEmpleado(empleado.idEmpleado)"> ELIMINAR</button>
-                        <a class="col" [routerLink]="['/editar', empleado.idEmpleado]">EDITAR</a>
-                    </div>
-    }
-</ul>
+                        <button class="btn btn-info btn-sm" [routerLink]="['/editar', empleado.idEmpleado]">
+                            EDITAR
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div >
 
