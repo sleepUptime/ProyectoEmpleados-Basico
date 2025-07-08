@@ -1,0 +1,20 @@
+<p>listar-empleado works!</p>
+
+<h1>Empleados:</h1>
+
+<ul class="empleado-list container text-center  fs-5 p-0">
+    @for (empleado of empleados; track $index) {
+                    <div class="empleado-container row ">
+                        
+                        <p class="col border border-black m-0 ">{{empleado.idEmpleado}}</p>
+                        <p class="col border border-black m-0 ">{{empleado.nombreEmpleado}}</p>
+                        <p class="col border border-black m-0">{{empleado.apellidoEmpleado}}</p>
+                        <p class="col-4 border border-black m-0">{{empleado.direccionEmpleado}}</p>
+                        <p class="col border border-black m-0">{{empleado.cargoEmpleado}}</p>
+                        <p class="col border border-black m-0">{{empleado.dniEmpleado}}</p>
+                        <button class="col m-0" (click)="deleteEmpleado(empleado.idEmpleado)"> ELIMINAR</button>
+                        <a class="col" [routerLink]="['/editar', empleado.idEmpleado]">EDITAR</a>
+                    </div>
+    }
+</ul>
+

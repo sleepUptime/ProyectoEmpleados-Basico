@@ -1,0 +1,31 @@
+<h2>CREAR EMPLEADO</h2>
+
+<form [formGroup]="empleadoForm" (ngSubmit)="guardar()">
+    <label>Nombre</label>
+    <br>
+    <input type="text" formControlName="nombreEmpleado">
+    <br>
+
+    <label>Apellido</label>
+    <br>
+    <input type="text" formControlName="apellidoEmpleado">
+    <br>
+
+    <label>Direccion</label>
+    <br>
+    <input type="text" formControlName="direccionEmpleado">
+    <br>
+
+    <label>Cargo</label>
+    <br>
+    <input type="text" formControlName="cargoEmpleado">
+    <br>
+
+    <label>DNI</label>
+    <br>
+    <input type="number" formControlName="dniEmpleado">
+    <br>
+
+    <button type="button" (click)="guardar()">Guardar</button>
+    <button type="button" (click)="limpiar()">Limpiar</button>
+</form>
