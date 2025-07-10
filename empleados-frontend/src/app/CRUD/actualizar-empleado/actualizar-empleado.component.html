@@ -1,24 +1,37 @@
-<h1>ACTUALIZAR EMPLEADO</h1>
+<h1 class="text-center text-decoration-underline">ACTUALIZAR EMPLEADO</h1>
 
-<form (ngSubmit)="actualizarEmpleado()">
-    <label for="">Nombre:</label>
-    <input [(ngModel)]="empleado.nombreEmpleado" name="nombreEmpleado">
-    <br>
-    <label for="">Apellido</label>
-    <input [(ngModel)]="empleado.apellidoEmpleado" name="apellidoEmpleado">
-    <br>
-    <br>
-    <label for="">Direccion:</label>
-    <input [(ngModel)]="empleado.direccionEmpleado" name="direccionEmpleado">
-    <br>
-    <br>
-    <label for="">Cargo:</label>
-    <input [(ngModel)]="empleado.cargoEmpleado" name="cargoEmpleado">
-    <br>
-        <br>
-    <label for="">DNI:</label>
-    <input [(ngModel)]="empleado.dniEmpleado" name="dniEmpleado">
-    <br>
+<div class="container-sm border border-black col-4">
+    <form (ngSubmit)="actualizarEmpleado()">
+        <div class="m-1">
+            <label class="col-4 fs-4" for="">Nombre:</label>
+            <input class="col-8" [(ngModel)]="empleado.nombreEmpleado" name="nombreEmpleado">
+        </div>
 
-    <button type="submit">Actualizar</button>
-</form>
+        <div class="m-1">
+            <label class="col-4 fs-4" for="">Apellido</label>
+            <input class="col-8" [(ngModel)]="empleado.apellidoEmpleado" name="apellidoEmpleado">
+        </div>
+
+        <div class="m-1">
+            <label class="col-4 fs-4" for="">Direccion:</label>
+            <input class="col-8" [(ngModel)]="empleado.direccionEmpleado" name="direccionEmpleado">
+        </div>
+
+        <div class="m-1">
+            <label class="col-4 fs-4" for="">Cargo:</label>
+            <input class="col-8" [(ngModel)]="empleado.cargoEmpleado" name="cargoEmpleado">
+        </div>
+
+        <div class="m-1">
+            <label class="col-4 fs-4" for="">DNI:</label>
+            <input class="col-8" [(ngModel)]="empleado.dniEmpleado" name="dniEmpleado">
+        </div>
+
+
+        <div class="m-1 text-center">
+            <button class="btn btn-success" type="submit">Actualizar</button>
+        </div>
+        
+    </form>
+</div>
+
